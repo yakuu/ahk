@@ -34,7 +34,7 @@ sleep 25
 }
 return
 
-; F3 To start escape to end the loop that spams 2,3,4 buttons
+; F3 To start escape to end the loop that spams buttons: 2,3,4
 F3::
     Loop
         Send, 234
@@ -42,7 +42,7 @@ F3::
 Return
 
 
-; F1 To start escape to end the loop that spams 1 button
+; F1 To start escape to end the loop that spams buttons: 4
 F1::
     Loop
         Send, 4

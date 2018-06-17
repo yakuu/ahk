@@ -42,7 +42,7 @@ F3::
 Return
 
 
-; F3 To start escape to end the loop that spams 2,3,4 buttons
+; F1 To start escape to end the loop that spams 1 button
 F1::
     Loop
         Send, 4

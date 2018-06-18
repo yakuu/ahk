@@ -15,13 +15,14 @@
 ;	A retrieved value of 1 (true) means the key is "on", while 0 (false) means it's "off".
 ; ##### Endof RandomStuff
 
+;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+;==============================================================
 ; Checks if Diablo 3 is running 
 #IfWinActive ahk_class D3 Main Window Class
 {
-
-
-
-; Ctrl + Left mouse button -> Drop items to the ground
+;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+;==============================================================
+; [Ctrl + Left mouse button] -> Drop items to the ground
 ^Lbutton::
 {
 click
@@ -33,22 +34,33 @@ MouseMove, %x_initial%, %y_initial%, 0
 sleep 25
 }
 return
-
-; F3 To start escape to end the loop that spams buttons: 2,3,4
-F3::
-    Loop
-        Send, 234
-    Until, GetKeyState("Esc","P")
-Return
-
-
-; F1 To start escape to end the loop that spams buttons: 4
+;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+;==============================================================
+; [F1] To start escape to end the loop that spams buttons: 4
 F1::
-    Loop
-        Send, 4
-    Until, GetKeyState("Esc","P")
+	Loop
+		Send, 4
+	Until, GetKeyState("F1","P")
 Return
-
-
+;==============================================================
+;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+;==============================================================
+; [F2] Spamms right click for kadala
+F2::
+	Loop
+		MouseClick, right,,
+	Until, GetKeyState("F2","P")
+Return
+;==============================================================
+;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+;==============================================================
+; [F3] To start escape to end the loop that spams buttons: 2,3,4
+F3::
+	Loop
+		Send, 234
+	Until, GetKeyState("F3","P")
+Return
+;==============================================================
+;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 }
